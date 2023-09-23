@@ -57,7 +57,7 @@ class FoodDataset(Dataset):
 def read_img_test(path, device):
     # Reading, converting and normalizing image
     img = cv2.imread(path, cv2.IMREAD_COLOR)
-    img = cv2.resize(img, (224, 224))
+    img = cv2.resize(img, (564, 564))
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB).astype(np.float32)
     img /= 255.
     img = img[..., np.newaxis]
